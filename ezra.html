@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top 10 Favorite Movies</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #f3f4f6, #dcdbe1);
+            color: #333;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #ff6f61;
+            margin-bottom: 40px;
+            font-size: 2.8em;
+            font-family: 'Georgia', serif;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 1.5s ease-out;
+        }
+        .movie-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .movie-item {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+            position: relative;
+            animation: slideIn 0.5s ease-out;
+        }
+        .movie-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            background: #f9f9f9;
+        }
+        .movie-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5));
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .movie-item:hover::before {
+            opacity: 1;
+        }
+        .movie-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+        .movie-item:hover img {
+            transform: scale(1.1);
+        }
+        .movie-content {
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+        }
+        .movie-item h2 {
+            font-size: 1.6em;
+            margin-top: 0;
+            color: #333;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            animation: colorChange 3s infinite alternate;
+        }
+        .movie-item p {
+            margin: 10px 0;
+            color: #555;
+        }
+        .movie-item .description {
+            font-style: italic;
+            color: #666;
+        }
+        .movie-item .reason {
+            color: #ff6f61;
+            font-weight: bold;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes colorChange {
+            0% {
+                color: #ff6f61;
+            }
+            50% {
+                color: #6b5b95;
+            }
+            100% {
+                color: #88b04b;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>My Top 10 Favorite Movies</h1>
+        <div class="movie-grid">
+            <div class="movie-item">
+                <img src="https://via.placeholder.com/300x200?text=The+Shawshank+Redemption" alt="The Shawshank Redemption">
+                <div class="movie-content">
+                    <h2>The Shawshank Redemption</h2>
+                    <p class="description">A story of hope and friendship between two prison inmates.</p>
+                    <p class="reason">It's a powerful tale of redemption and human resilience.</p>
+                </div>
+            </div>
+            <div class="movie-item">
+                <img src="https://via.placeholder.com/300x200?text=The+Godfather" alt="The Godfather">
+                <div class="movie-content">
+                    <h2>The Godfather</h2>
+                    <p class="description">The epic saga of a crime family and its rise to power.</p>
+                    <p class="reason">Brilliant storytelling and iconic performances.</p>
+                </div>
+            </div>
+            <div class="movie-item">
+                <img src="https://via.placeholder.com/300x200?text=The+Dark+Knight" alt="The Dark Knight">
+                <div class="movie-content">
+                    <h2>The Dark Knight</h2>
+                    <p class="description">A thrilling and complex superhero film featuring Batman and the Joker.</p>
+                    <p class="reason">It's a gripping, dark, and sophisticated take on the superhero genre.</p>
+                </div>
+            </div>
+            <div class="movie-item">
+                <img src="https://via.placeholder.com/300x200?text=Inception" alt="Inception">
+                <div class="movie-content">
+                    <h2>Inception</h2>
+                    <p class="description">A mind-bending film about dreams within dreams and a heist to plant an idea in someone's mind.</p>
+                    <p class="reason">Its innovative plot and stunning visuals make it a unique experience.</p>
+                </div>
+            </div>
+            <div class="movie-item">
+                <img src="https://via.placeholder.com/300x200?text=The+Matrix" alt="The Matrix">
+                <div class="movie-content">
+                    <h2>The Matrix</h2>
+                    <p class="description">A revolutionary sci-fi film about a computer hacker who discovers reality is an illusion.</p>
+                    <p class="reason">Its groundbreaking special effects and thought-provoking story.</p>
+                </div>
+            </div>
+            <div class="movie-item">
+                <img src="https://via.placeholder.com/300x200?text=Pulp+Fiction" alt="Pulp Fiction">
+                <div class="movie-content">
+                    <h2>Pulp Fiction</h2>
+                    <p class="description">An interconnected series of stories featuring crime and quirky characters.</p>
+                    <p class="reason">Its sharp dialogue and non-linear narrative are incredibly engaging.</p>
+                </div>
+            </div>
+            <div class="movie-item">
+                <img src="https://via.placeholder.com/300x200?text=Forrest+Gump" alt="Forrest Gump">
+                <div class="movie-content">
+                    <h2>Forrest Gump</h2>
+                    <p class="description">The life story of a man with a low IQ who witnesses and unwittingly influences several historical events.</p>
+                    <p class="reason">It's a heartwarming story with a great blend of humor and drama.</p>
+                </div>
+            </div>
+            <div class="movie-item">
+                <img src="https://via.placeholder.com/300x200?text=The+Lord+of+the+Rings" alt="The Lord of the Rings: The Fellowship of the Ring">
+                <div class="movie-content">
+                    <h2>The Lord of the Rings: The Fellowship of the Ring</h2>
+                    <p class="description">The beginning of the epic journey of a hobbit and his companions to destroy a powerful ring.</p>
+                    <p class="reason">The epic fantasy world and unforgettable adventure.</p>
+                </div>
+            </div>
+            <div class="movie-item">
+                <img src="https://via.placeholder.com/300x200?text=Fight+Club" alt="Fight Club">
+                <div class="movie-content">
+                    <h2>Fight Club</h2>
+                    <p class="description">A disenchanted man creates an underground fight club that evolves into something much bigger.</p>
+                    <p class="reason">Its thought-provoking themes and bold storytelling.</p>
+                </div>
+            </div>
+            <div class="movie-item">
+                <img src="https://via.placeholder.com/300x200?text=The+Silence+of+the+Lambs" alt="The Silence of the Lambs">
+                <div class="movie-content">
+                    <h2>The Silence of the Lambs</h2>
+                    <p class="description">An FBI trainee seeks the help of a brilliant but dangerous serial killer to catch another murderer.</p>
+                    <p class="reason">The chilling performances and suspenseful plot.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
